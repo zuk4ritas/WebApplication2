@@ -1,0 +1,446 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification\ 
+for details on configuring this project to bundle and minify static web assets. */
+
+/*Load codigo Font*/
+@font-face {
+    src: url(/fonts/codigo/SourceCodePro-Semibold.otf);
+    font-family: codigo;
+}
+
+/* Modify Styles of Body*/
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    font-family: codigo;
+    background-color: black;
+    color: #fff;
+    background: linear-gradient(-20deg, black, #333, black, black);
+    background-size: 400% 400%;
+    -webkit-animation: Gradient 15s ease infinite;
+    -moz-animation: Gradient 15s ease infinite;
+    animation: Gradient 15s ease infinite;
+}
+
+
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+
+
+
+.body-content {
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+/* Carousel */
+.carousel-caption p {
+    font-size: 20px;
+    line-height: 1.4;
+}
+
+/* Make .svg files in the carousel display properly in older browsers */
+.carousel-inner .item img[src$=".svg"] {
+    width: 100%;
+}
+
+/* QR code generator */
+#qrCode {
+    margin: 15px;
+}
+
+/* Hide/rearrange for smaller screens */
+@media screen and (max-width: 767px) {
+    /* Hide captions */
+    .carousel-caption {
+        display: none;
+    }
+}
+
+.redes {
+    display: inline;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+/* Cambia estilos iconos Redes sociales */
+
+.icono {
+    float: left;
+}
+
+    .icono a {
+        display: block;
+        color: white;
+        padding: 16px;
+    }
+
+        .icono a:hover {
+            opacity: 0.8;
+        }
+
+
+@media (max-width: 1200px) {
+    address {
+        padding-left: 12%;
+    }
+}
+
+@media (min-width: 480px) {
+    address {
+        padding-left: 5%;
+    }
+}
+
+h3 {
+    padding-left: 3%;
+}
+
+/*Anima el Background*/
+
+@-webkit-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@-moz-keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+@keyframes Gradient {
+    0% {
+        background-position: 0% 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0% 50%
+    }
+}
+
+footer {
+    padding-left: 2%;
+}
+
+/*Responsive Titulo*/
+@media(max-width: 1200px) {
+    .titulo {
+        font-size: 40px;
+        text-align: center;
+        z-index: 1;
+        color: white;
+        position: absolute;
+        margin-top: 16%;
+        line-height: 33px;
+        animation: noise-anim-2 7s infinite linear alternate-reverse;
+        text-shadow: -1px 0 red;
+    }
+}
+
+@media (min-width:480px) {
+    .titulo {
+        font-size: 90px;
+        text-align: center;
+        z-index: 1;
+        color: white;
+        position: absolute;
+        margin-top: 16%;
+        padding-left: 1%;
+        text-shadow: -1px 0 red;
+    }
+}
+
+@media (min-width:480px) {
+    .titulo:hover {
+        font-size: 90px;
+        text-align: center;
+        z-index: 1;
+        color: white;
+        position: absolute;
+        margin-top: 16%;
+        padding-left: 1%;
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+        clip: rect(0, 900px, 0, 0);
+        text-shadow: -1px 0 red;
+    }
+}
+
+@media (max-width:1200px) {
+    .subtitulo {
+        font-size: 40px;
+        text-shadow: -1px 0 red;
+        text-align: center;
+        z-index: 1;
+        color: white;
+        position: absolute;
+        margin-top: 10%;
+        padding-left: 2%;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
+}
+
+
+@media (min-width:480px) {
+    .subtitulo {
+        font-size: 90px;
+        text-shadow: -1px 0 red;
+        text-align: center;
+        z-index: 1;
+        color: white;
+        position: absolute;
+        margin-top: 10%;
+        padding-left: 2%;
+    }
+}
+
+@media (min-width:480px) {
+    .subtitulo:hover {
+        font-size: 90px;
+        text-shadow: -1px 0 red;
+        text-align: center;
+        z-index: 1;
+        color: white;
+        position: absolute;
+        margin-top: 10%;
+        padding-left: 2%;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+    }
+}
+
+
+@keyframes noise-anim {
+    0% {
+        clip: rect(23px, 9999px, 67px, 0);
+    }
+
+    5% {
+        clip: rect(57px, 9999px, 44px, 0);
+    }
+
+    10% {
+        clip: rect(90px, 9999px, 18px, 0);
+    }
+
+    15% {
+        clip: rect(37px, 9999px, 22px, 0);
+    }
+
+    20% {
+        clip: rect(5px, 9999px, 67px, 0);
+    }
+
+    25% {
+        clip: rect(65px, 9999px, 42px, 0);
+    }
+
+    30% {
+        clip: rect(39px, 9999px, 17px, 0);
+    }
+
+    35% {
+        clip: rect(66px, 9999px, 88px, 0);
+    }
+
+    40% {
+        clip: rect(17px, 9999px, 2px, 0);
+    }
+
+    45% {
+        clip: rect(30px, 9999px, 30px, 0);
+    }
+
+    50% {
+        clip: rect(33px, 9999px, 15px, 0);
+    }
+
+    55% {
+        clip: rect(55px, 9999px, 77px, 0);
+    }
+
+    60% {
+        clip: rect(30px, 9999px, 32px, 0);
+    }
+
+    65% {
+        clip: rect(79px, 9999px, 11px, 0);
+    }
+
+    70% {
+        clip: rect(9px, 9999px, 63px, 0);
+    }
+
+    75% {
+        clip: rect(44px, 9999px, 26px, 0);
+    }
+
+    80% {
+        clip: rect(36px, 9999px, 72px, 0);
+    }
+
+    85% {
+        clip: rect(92px, 9999px, 89px, 0);
+    }
+
+    90% {
+        clip: rect(37px, 9999px, 51px, 0);
+    }
+
+    95% {
+        clip: rect(37px, 9999px, 60px, 0);
+    }
+
+    100% {
+        clip: rect(7px, 9999px, 84px, 0);
+    }
+}
+
+
+@keyframes noise-anim-2 {
+    0% {
+        clip: rect(40px, 9999px, 41px, 0);
+    }
+
+    5% {
+        clip: rect(51px, 9999px, 4px, 0);
+    }
+
+    10% {
+        clip: rect(37px, 9999px, 22px, 0);
+    }
+
+    15% {
+        clip: rect(61px, 9999px, 88px, 0);
+    }
+
+    20% {
+        clip: rect(76px, 9999px, 39px, 0);
+    }
+
+    25% {
+        clip: rect(25px, 9999px, 46px, 0);
+    }
+
+    30% {
+        clip: rect(37px, 9999px, 16px, 0);
+    }
+
+    35% {
+        clip: rect(13px, 9999px, 88px, 0);
+    }
+
+    40% {
+        clip: rect(42px, 9999px, 98px, 0);
+    }
+
+    45% {
+        clip: rect(75px, 9999px, 34px, 0);
+    }
+
+    50% {
+        clip: rect(33px, 9999px, 98px, 0);
+    }
+
+    55% {
+        clip: rect(80px, 9999px, 37px, 0);
+    }
+
+    60% {
+        clip: rect(75px, 9999px, 79px, 0);
+    }
+
+    65% {
+        clip: rect(13px, 9999px, 75px, 0);
+    }
+
+    70% {
+        clip: rect(45px, 9999px, 84px, 0);
+    }
+
+    75% {
+        clip: rect(32px, 9999px, 52px, 0);
+    }
+
+    80% {
+        clip: rect(36px, 9999px, 97px, 0);
+    }
+
+    85% {
+        clip: rect(57px, 9999px, 92px, 0);
+    }
+
+    90% {
+        clip: rect(6px, 9999px, 87px, 0);
+    }
+
+    95% {
+        clip: rect(64px, 9999px, 50px, 0);
+    }
+
+    100% {
+        clip: rect(76px, 9999px, 81px, 0);
+    }
+}
+
+/*Texto parrafo About*/
+
+.imagen {
+    padding: 10%;
+}
+
+/*Container About*/
+@media (min-width:1200px) {
+    .container .about {
+        margin-left: 15%;
+        margin-top: 30px;
+    }
+}
+
+@media (min-width:480px) {
+    .container .about {
+        margin-left: 15%;
+        margin-top: 20px;
+    }
+}
+
+/*Texto sobre mí*/
+.texto {
+    padding-left: 10%;
+    padding-right: 10%;
+    text-align: justify;
+}
+
+
+@media (min-width:1200px) {
+    .texto {
+        text-align: justify;
+        padding: 3%;
+        padding-right: 30%;
+    }
+}
